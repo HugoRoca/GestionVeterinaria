@@ -462,3 +462,8 @@ function PasarFechaBarraMySql(val) {
     var fecha = val.split('-');
     return fecha[2] + '/' + fecha[1] + '/' + fecha[0];
 }
+
+////////////////////////////
+function mostrarConsola(texto){
+    return console.log(texto);
+}
