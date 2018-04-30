@@ -1,13 +1,152 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="Sistema de gestión de veterinaria">
+    <meta name="author" content="Hugo Roca - hugo.rock20@hotmail.com">
+    <meta name="keyword" content="Bootstrap,AngularJS,COREUI,jQuery,HTML,Veterinaria,Perros,Gatos,Animales,Animal,clinica">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>:: GESTIÓN DE VETERINARIA</title>
+    <!--iconos-->
+    <link rel="stylesheet" href="Assets/icons/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="Assets/icons/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Assets/icons/simple-line-icons/css/simple-line-icons.css">
+    <!--estilos principal-->
+    <link rel="stylesheet" href="Assets/css/style.css">
+    <link rel="stylesheet" href="Assets/css/pace.min.css">
 </head>
-<body>
-    <h1>Gestión</h1>
+
+<body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
+    <header class="app-header navbar">
+        <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-togle="sidebar-show">
+            <span class="navbar-toggle-icon"></span>
+        </button>
+        <a href="" class="navbar-brand">
+            <img src="Assets/img/logo.svg" alt="Veterinaria logo" width="89" height="25" class="navbar-brand-full">
+            <img src="Assets/img/sygnet.svg" alt="Veterinaria logo" width="30" height="30" class="navbar-brand-minimized">
+        </a>
+        <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <ul class="nav navbar-nav d-md-down-none">
+            <li class="nav-item px-3">
+                <a href="" class="nav-link">Dashboard</a>
+            </li>
+            <li class="nav-bar px-3">
+                <a href="" class="nav-link">Users</a>
+            </li>
+            <li class="nav-item px-3">
+                <a href="" class="nav-link">Settings</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item d-md-down-none">
+                <a href="" class="nav-link">
+                    <i class="icon-bell"></i>
+                    <span class="badge badge-pill badge-danger">5</span>
+                </a>
+            </li>
+            <li class="nav-item d-md-down-none">
+                <a href="" class="nav-link">
+                    <i class="icon-location-pin"></i>
+                </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="" class="nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <img src="Assets/img/avatars/6.jpg" alt="hugo.rock20@hotmail.com" class="img-avatar">
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-header text-center">
+                        <strong>Cuenta</strong>
+                    </div>
+                    <a href="" class="dropdown-item">
+                        <i class="fa fa-lock"></i> Cerrar sesión
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <button class="navbar-toggler aside-menu-toggler d-md-down-none" type="button" data-toggle="aside-menu-lg-show">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <button class="navbar-toggler aside-menu-toggler d-lg-none">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </header>
+
+    <div class="app-body">
+        <div class="sidebar">
+            <nav class="sidebar-nav">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="" class="nav-link">
+                            <i class="nav-icon icon-speedometer"></i> Dashboard
+                            <span class="badge badge-primary">NEW</span>
+                        </a>
+                    </li>
+                    <li class="nav-title">Temas</li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon icon-drop"></i> Colores
+                        </a>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#">
+                            <i class="nav-icon icon-puzzle"></i> Base
+                        </a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="base-breadcrumb.html">
+                                    <i class="nav-icon icon-puzzle"></i> Breadcrumb</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="nav-title">Extras</li>
+                </ul>
+            </nav>
+            <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+        </div>
+        <main class="main">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">Inicio</li>
+                <li class="breadcrumb-item">
+                    <a href="">Admin</a>
+                </li>
+            </ol>
+            <div class="container-fluid">
+                <div class="animated fadeIn">
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="card text-white bg-primary">
+                                <div class="card-body pb-0">
+                                    <div class="text-value">9.823</div>
+                                    <div>Members online</div>
+                                </div>
+                                <div class="chart-wrapper mt-3 mx-3" style="height: 70px;">
+                                    <canvas id="card-chart1" class="chart" height="70"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+
+
+    <footer class="app-footer">
+        <div>
+            <a href="">APP Veterinaria</a>
+            <span>&copy; 2018 </span>
+        </div>
+        <div class="ml-auto">
+            <span>Powered by</span>
+            <a href="mailto:hugo.rock20@hotmail.com">Hugo Roca</a>
+        </div>
+    </footer>
 
     <script src="Scripts/jquery.js"></script>
     <script src="Scripts/angular.js"></script>
@@ -21,6 +160,14 @@
     <script src="Scripts/modules/angular-ui-router.js"></script>
     <script src="Scripts/modules/loading-bar.js"></script>
     <script src="Scripts/utils.js"></script>
+    <script src="Scripts/popper.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/pace.min.js"></script>
+    <script src="Scripts/perfect-scrollbar.min.js"></script>
+    <script src="Scripts/coreui.min.js"></script>
+    <script src="Scripts/Chart.min.js"></script>
+    <script src="Scripts/custom-tooltips.min.js"></script>
+    <script src="Scripts/main.js"></script>
     <!-- Scripts funcionamiento gestión -->
     <script src="App/app.js"></script>
     <script src="App/shared/configuration.service.js"></script>
@@ -30,4 +177,5 @@
     <script src="App/app.config.js"></script>
     <script src="App/app.controller.js"></script>
 </body>
+
 </html>
