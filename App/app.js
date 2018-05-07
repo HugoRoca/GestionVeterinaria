@@ -8,7 +8,6 @@
         'ngAnimate',
         'toastr',
         'angular-loading-bar',
-        'ui.bootstrap',
         'angularFileUpload'
     ]);
 })();

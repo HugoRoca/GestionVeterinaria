@@ -6,9 +6,9 @@
         .module('APPVeterinaria')
         .factory('authenticationService', authenticationService);
 
-    authenticationService.$inject = ['$http', '$state', 'localStorageService', 'configService', 'toastr', 'dataservice'];
+    authenticationService.$inject = ['$http', '$state', 'localStorageService', 'configService', 'toastr', 'dataService'];
 
-    function authenticationService($http, $state, localStorageService, configService, toastr, dataservice) {
+    function authenticationService($http, $state, localStorageService, configService, toastr, dataService) {
         var service = {
             login: login,
             logout: logout,
@@ -19,7 +19,7 @@
 
         ////////////////
         function login(user) {
-            dataservice.postData('', 'data').then(function (data) {
+            dataService.postData('', 'data').then(function (data) {
                 mostrarConsola(data);
                 if (data.data.lenght > 0) {
                     localStorage.setItem('Veterinaria', {

@@ -12,11 +12,11 @@
         $stateProvider
             .state('portal', {
                 url: '/portal',
-                templateUrl: 'App/private/portal/portal.html'
+                templateUrl: 'App/private/dashboard/dashboard.html'
             })
             .state('otherwise',{
                 url: '*path',
-                templateUrl: 'App/private/portal/portal.html'
+                templateUrl: 'App/private/dashboard/dashboard.html'
             })
     }
 })();
