@@ -6,14 +6,15 @@
         .module('APPVeterinaria')
         .controller('loginController', loginController);
 
-    loginController.$inject = ['configService', 'authenticationService', 'localStorgeService', 'dataService', 'toastr', '$state'];
+    loginController.$inject = ['configService', 'authenticationService', 'dataService', 'toastr', '$state'];
 
-    function loginController(configService, authenticationService, localStorgeService, dataService, toastr, $state) {
+    function loginController(configService, authenticationService, dataService, toastr, $state) {
         var vm = this;
         vm.usuario = {
             usuario: '',
             contrasenia: ''
         }
+        vm.error = false;
 
         vm.login = login;
 
@@ -22,14 +23,15 @@
         ////////////////
 
         function activate() {
-            if (configService.getLogin()) return location.href = 'index.html#!/portal';
+            if (configService.getLogin()) return location.href = '../index.html#!/dashboard';
+            vm.error = false;
         }
 
         function login(val) {
             if (val) {
                 authenticationService.login(vm.usuario);
             }else{
-                toastr.warning('Debe de completaer los datos!', 'Login');
+                vm.error = true;
             }
         }
     }

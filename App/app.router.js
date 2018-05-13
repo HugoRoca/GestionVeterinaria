@@ -10,8 +10,8 @@
 
     function routeConfig($stateProvider, $urlRouterProvider) {
         $stateProvider
-            .state('portal', {
-                url: '/portal',
+            .state('dashboard', {
+                url: '/dashboard',
                 templateUrl: 'App/private/dashboard/dashboard.html'
             })
             .state('otherwise',{

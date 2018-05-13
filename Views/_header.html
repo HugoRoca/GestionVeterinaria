@@ -1,4 +1,4 @@
-<header class="app-header navbar">
+<header class="app-header navbar" ng-controller="headerController as vm">
     <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -32,7 +32,7 @@
                 <div class="dropdown-header text-center">
                     <strong>Settings</strong>
                 </div>
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="" ng-click="vm.logout()">
                     <i class="fa fa-lock"></i> Logout</a>
             </div>
         </li>

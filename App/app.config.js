@@ -12,12 +12,12 @@
 
     run.$inject = ['$http','$state','localStorageService','configService','$rootScope'];
 
-    function run($http, $state, LocalStorageService, configService, $rootScope){
-        var user = LocalStorageService.get('Veterinaria');
+    function run($http, $state, localStorageService, configService, $rootScope){
+        var user = localStorageService.get('Veterinaria');
         
         if (user && user.token != '') {
             configService.setLogin(true);
-            $state.go('portal');
+            $state.go('dashboard');
         }else{
             configService.setLogin(false);
         }

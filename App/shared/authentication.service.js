@@ -19,30 +19,29 @@
 
         ////////////////
         function login(user) {
-            dataService.postData('', 'data').then(function (data) {
+            /*dataService.postData('', 'data').then(function (data) {
                 mostrarConsola(data);
-                if (data.data.lenght > 0) {
-                    localStorage.setItem('Veterinaria', {
+                if (data.data.lenght > 0) {*/
+                    localStorageService.set('Veterinaria', {
                         token: 'aqui va el token..',
-                        userName: data.data[0].usuario,
-                        id: data.data[0].id
+                        userName: 'login'/*data.data[0].usuario,
+                        id: data.data[0].id*/
                     });
 
                     configService.setLogin(true);
-                    toastr.success('Has ingresado correctamente al sistema.', 'BIENVENIDO');
-                    location.href = 'index.html#!/portal';
-                } else {
+                    location.href = '../index.html#!/dashboard';
+                /*} else {
                     toastr.warning('Usuario y/o contraseña incorrecto.', 'LOGIN');
                 }
             }, function (error) {
                 errorValida(error)
-            });
+            });*/
         }
 
         function logout() {
             localStorageService.remove('Veterinaria');
             configService.setLogin(false);
-            location.href = 'login.html';
+            location.href = 'Views/login.html';
         }
 
         function errorValida(error) {
