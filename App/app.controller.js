@@ -17,7 +17,7 @@
         ////////////////
 
         function activate() { 
-            /*if (!configService.getLogin()) return location.href = 'Views/login.html';
+           /* if (!configService.getLogin()) return location.href = 'Views/login.html';
             $state.go('portal');*/
         }
 
