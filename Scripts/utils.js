@@ -1,19 +1,11 @@
-﻿// ┌────────────────────────────────────────────────────────────────────┐ \\
-// │ Soy Lucas v1.0                                                     │ \\
-// ├────────────────────────────────────────────────────────────────────┤ \\
-// │ Copyright © 2017 Hugo Roca - Tibox (hugo.roca@tibox.com.pe)        │ \\
-// ├────────────────────────────────────────────────────────────────────┤ \\
-// └────────────────────────────────────────────────────────────────────┘ \\
-var URL = {
-    BASE: 'http://localhost:81/',
-    INICIO: 'http://localhost:81/Inicio'
-}
+﻿// Hugo Roca - 2018
 
+/*Copiar y pegar 
 $(document).ready(function () {
     $('*').bind("cut copy paste", function (e) {
         e.preventDefault();
     });
-});
+});*/
 
 function pintaConsola() {
 
@@ -55,15 +47,6 @@ function SoloLetrasInputs(e) {
 
     if (letras.indexOf(tecla) == -1 && !tecla_especial)
         return false;
-}
-
-function LimpiaInputsSoloLetras() {
-    var val = document.getElementById("miInput").value;
-    var tam = val.length;
-    for (i = 0; i < tam; i++) {
-        if (!isNaN(val[i]))
-            document.getElementById("miInput").value = '';
-    }
 }
 
 function SoloNumerosInputs(e) {
@@ -133,15 +116,6 @@ function YYYYMMDDConvert(date) {
     if (day.length < 2) day = '0' + day;
 
     return [year, month, day].join('-');
-}
-
-function DiferenciaDias2(fechaDesembolso, dFechaCalen) {
-    var date1 = new Date(fechaDesembolso);
-    var date2 = new Date(dFechaCalen);
-
-    var timeDiff = Math.abs(date1.getTime() - date2.getTime());
-    var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
-    return diffDays;
 }
 
 function DiferenciaDias(fechaDesembolso, dFechaCalen) {
@@ -251,134 +225,6 @@ function validaFechaNacimiento(Fecha) {
     }
 }
 
-function validarRUC(texto) {
-
-}
-
-function emailCuerpo(titulo, nombre, resumen, descripcion1, texto1, texto2, descripcion2) {
-    var body = '<table border="0" style="width: 100%; background: #f1f1f1; font-family: verdana">' +
-        '<tr>' +
-        '<td>' +
-        '<table cellspacing="0" cellpadding="0" border="0" style="margin: 0 auto; width: 85%">' +
-        '<tr style="background: #FD293F">' +
-        '<td colspan="3" style="padding: 30px">' +
-        '<h1 style="text-transform: uppercase; text-align: center; color: white; margin: 0 auto; font-family: verdana">' + titulo + '</h1>' +
-        '</td>' +
-        '</tr>' +
-        '<tr style="background: white">' +
-        '<td colspan="3" style="padding: 15px;">' +
-        '<h2 style="background: white; text-transform: uppercase; text-align: center; font-family: verdana">hola ' + nombre + '</h2>' +
-        '<h4 style="font-weight: 500; text-transform: uppercase; text-align: center; font-family: verdana"><i>' + resumen + '</i></h4>' +
-        '<p style="text-align: justify; padding: 15px; font-family: verdana">' + descripcion1 + '</p>';
-    if (texto1 != '' || texto2 != '') {
-        body = body + '<ul>';
-        if (texto1 != '') {
-            body = body + '<li><b>' + texto1 + '</b></li>';
-        }
-        if (texto2 != '') {
-            body = body + '<li><b>' + texto2 + '</b></li>';
-        }
-        body = body + '<ul>';
-    }
-
-    if (descripcion2 != '') {
-        body = body + '<p>' + descripcion2 + '</p>';
-    }
-    body = body + '</td>' +
-        '</tr>' +
-        '<tr style="background: #454544; text-transform: uppercase; text-align: center">' +
-        '<td style="padding: 25px">' +
-        '<button style="text-align: center; color: #fff; font-size: 14px; font-weight: 500;  border:none; padding: 10px 20px; background-color: #FFB700; font-size: 25px">' +
-        '<span style="color: #454544; text-transform: uppercase; font-weight: bold; font-size: 25px">Al&oacute; Lucas:</span> 01 615-7030</button>' +
-        '</td>' +
-        '</tr>' +
-        '</table>' +
-        '</td>' +
-        '</tr>' +
-        '</table>';
-    return body;
-}
-
-function valoresReglaNegocio(ListaReglas) {
-    var valores = [];
-    var xml = '';
-    var idRule = 0;
-    console.log(ListaReglas);
-    debugger;
-    if (ListaReglas != null) {
-        for (var i = 0; i < ListaReglas.length; i++) {
-            var rules = ListaReglas[i];
-            idRule = rules.nIdNeg;
-            xml = '<GENESYS>';
-
-            for (var j = 0; j < ListaReglas.length; j++) {
-                if (idRule == ListaReglas[j].nIdNeg) {
-                    var data = document.getElementById(ListaReglas[j].cNomCom).value;
-                    xml = xml + '<DATA parametro="' + ListaReglas[j].cNombrePar + '" valor="' + data + '"></DATA>';
-                }
-            }
-
-
-            xml = xml + '</GENESYS>';
-            valores.push(rules.cStored + '|' + xml + '|' + idRule);
-        }
-    }
-
-    return valores;
-
-}
-
-/*Modal carga*/
-var progress;
-var $bar = $('.bar');
-
-function modalCargaLlamar(texto) {
-    $('body').removeClass('modal-open');
-    $('.modal-backdrop').remove();
-    document.getElementById('modalCargandoTexto').innerHTML = texto;
-    $bar.css('width', '1%')
-    $bar.text('1%');
-    $('#modalCarga').modal({
-        backdrop: 'static',
-        keyboard: false
-    });
-}
-
-$('#modalCarga').on('shown.bs.modal', function () {
-    var i = 0;
-    $bar.css('width', '1%')
-    $bar.text('1%');
-    progress = setInterval(function () {
-        if (i == 100) {
-            clearInterval(progress);
-            $('.progress').removeClass('active');
-            $('#modalCarga').modal('hide');
-        } else {
-            i = i + 1;
-            $bar.css('width', i + '%')
-        }
-        $bar.text(i + "%");
-    }, 1000);
-
-});
-
-function modalCargaCerrar() {
-    clearInterval(progress);
-    $bar.css('width', '100%')
-    $bar.text('100%');
-    $('.progress').removeClass('active');
-    $('#modalCarga').modal('hide');
-    $('body').removeClass('modal-open');
-    $('.modal-backdrop').remove();
-}
-/*Modal carga*/
-
-function ocultarModal(val) {
-    $('#' + val).modal('hide');
-    $('body').removeClass('modal-open');
-    $('.modal-backdrop').remove();
-}
-
 function validaFechaExiste(fecha) {
     var fechaf = fecha.split("/");
     var d = fechaf[0];
@@ -387,57 +233,11 @@ function validaFechaExiste(fecha) {
     return m > 0 && m < 13 && y > 0 && y < 32768 && d > 0 && d <= (new Date(y, m, 0)).getDate();
 }
 
-function calcularTCEA(calendario) {
-    var irr = 0.1;
-    var pvPrev = hallapvPRev(calendario);
-    var pv = hallaPV(irr, 360, calendario);
-    var t = 0;
-    var irrPrev = 0;
-
-    while (Math.abs(pv) >= 0.0001) {
-        t = irrPrev;
-        irrPrev = irr;
-        irr = irr + (t - irr) * pv / (pv - pvPrev);
-        pvPrev = pv;
-        pv = hallaPV(irr, 365, calendario);
-    }
-
-    return (irr * 100.00);
-}
-
 function hallaRestaFecha(fecha, fechaPrincipal) {
     var date1 = new Date(fecha).getTime();
     var date2 = new Date(fechaPrincipal).getTime();
     var dif = date1 - date2;
     return (dif / (1000 * 60 * 60 * 24));
-}
-
-function hallaPV(irr, dias, calendario) {
-    var suma = 0;
-    var amt = 0;
-    var exponente = 0;
-    var base = 0;
-    var potencia = 0;
-
-    for (var i = 0; i < calendario.length; i++) {
-        amt = calendario[i].monto;
-        base = parseFloat(1.00 + irr);
-        exponente = parseFloat(hallaRestaFecha(calendario[i].fecha, calendario[0].fecha) / dias);
-        potencia = Math.pow(base, exponente);
-        suma = suma + parseFloat(amt / potencia);
-    }
-
-    return suma;
-}
-
-function hallapvPRev(calendario) {
-    var suma = 0;
-    var amt = 0;
-    for (var index = 0; index < calendario.length; index++) {
-        amt = calendario[index].monto;
-        suma = suma + amt;
-    }
-    return suma;
 }
 
 function ponerADecimales(val, decimal) {
