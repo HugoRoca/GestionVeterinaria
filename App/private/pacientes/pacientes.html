@@ -4,6 +4,38 @@
 </ol>
 <div class="container-fluid" ng-controller="pacientesController as vm">
     <div class="animated fadeIn">
-
+        <div class="card">
+            <div class="card-header">
+                <strong>Pacientes</strong>
+                <small>Formulario de registro</small>
+            </div>
+            <div class="card-body">
+                <form role="form" name="frmPacientes" ng-submit="" novalidate>
+                    <div class="row">
+                        <div class="col-12 col-lg-4">
+                            <div class="form-group">
+                                <label class="form-col-form-label" for="inputSuccess2">Input with success</label>
+                                <input type="text" class="form-control is-valid" id="inputSuccess2">
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="form-group">
+                                <label class="form-col-form-label" for="inputError2">Input required</label>
+                                <input type="text" class="form-control is-invalid" id="inputError2" required="">
+                                <div class="invalid-feedback">
+                                    Please provide a valid informations.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="form-group">
+                                <label class="form-col-form-label" for="inputSuccess2">Input with success</label>
+                                <input type="text" class="form-control is-valid" id="inputSuccess2">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
