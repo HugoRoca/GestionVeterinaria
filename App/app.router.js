@@ -14,6 +14,10 @@
                 url: '/dashboard',
                 templateUrl: 'App/private/dashboard/dashboard.html'
             })
+            .state('pacientes', {
+                url: '/pacientes',
+                templateUrl: 'App/private/pacientes/pacientes.html'
+            })
             .state('otherwise',{
                 url: '*path',
                 templateUrl: 'App/private/dashboard/dashboard.html'
