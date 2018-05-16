@@ -14,24 +14,72 @@
                     <div class="row">
                         <div class="col-12 col-lg-4">
                             <div class="form-group">
-                                <label class="form-col-form-label" for="inputSuccess2">Input with success</label>
-                                <input type="text" class="form-control is-valid" id="inputSuccess2">
+                                <label class="form-col-form-label">
+                                    <b>ID Paciente</b>
+                                </label>
+                                <input type="text" id="txtIdPaciente" class="form-control" value="P0000001" readonly>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-4">
-                            <div class="form-group">
-                                <label class="form-col-form-label" for="inputError2">Input required</label>
-                                <input type="text" class="form-control is-invalid" id="inputError2" required="">
-                                <div class="invalid-feedback">
-                                    Please provide a valid informations.
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-lg-8">
+                            <div class="row">
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-col-form-label">Nombre paciente:</label>
+                                        <input type="text" class="form-control" id="txtNombrePaciente" autocomplete="off" autofocus maxlength="100">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-col-form-label">Raza</label>
+                                        <select id="cmbRaza" class="form-control">
+                                            <option value="">--Seleccione--</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-col-form-label">Especie</label>
+                                        <select id="cmdEspecie" class="form-control">
+                                            <option value="">--Seleccione--</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-col-form-label">Sexo</label>
+                                        <select id="cmbSexo" class="form-control">
+                                            <option value="">--Seleccione--</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-ol-form-label">Tamaño</label>
+                                        <select id="cmbTamanio" class="form-control">
+                                            <option value="">--Seleccione--</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-col-form-label">Color</label>
+                                        <input type="text" id="txtColor" class="form-control">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-12 col-lg-4">
-                            <div class="form-group">
-                                <label class="form-col-form-label" for="inputSuccess2">Input with success</label>
-                                <input type="text" class="form-control is-valid" id="inputSuccess2">
+                            <div class="text-center">
+                                <img src="Assets/img/registro_paciente_dibujo.jpg" class="rounded" width="250px" height="350px">
                             </div>
+                            &nbsp;
+                            <p class="text-center">
+                                <button class="btn btn-primary"><span class="fa fa-upload"></span> Subir foto</button>
+                            </p>
                         </div>
                     </div>
                 </form>
