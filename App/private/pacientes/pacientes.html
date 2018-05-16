@@ -6,11 +6,147 @@
     <div class="animated fadeIn">
         <div class="card">
             <div class="card-header">
-                <strong>Pacientes</strong>
-                <small>Formulario de registro</small>
+                <div class="controls">
+                    <div class="input-prepend input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa fa-search"></i>
+                            </span>
+                        </div>
+                        <input id="txtBuscar" class="form-control col-sm-2" type="text" maxlength="20" placeholder="Nombre de mascota...">
+                        <span class="input-group-append">
+                            <button class="btn btn-secondary" type="button">
+                                <i class="fa fa-search"></i> Buscar</button>
+                            <button class="btn btn-primary" type="button">
+                                <i class="fa fa-github"></i> Nuevo paciente</button>
+                        </span>
+                    </div>
+                </div>
             </div>
             <div class="card-body">
-                <form role="form" name="frmPacientes" ng-submit="" novalidate>
+                <table class="table table-responsive-sm table-hover table-outline mb-0">
+                    <thead class="thead-light">
+                        <tr>
+                            <th class="text-github">
+                                <i class="icon-people"></i>
+                            </th>
+                            <th class="text-center">Mascota</th>
+                            <th>Raza</th>
+                            <th>Especie</th>
+                            <th>Color</th>
+                            <th>Dueño</th>
+                            <th>Ult. Visita</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">
+                                <div class="avatar">
+                                    <img src="Assets/img/avatars/1.jpg" alt="hugo.roca@hotmail.com" class="img-avatar">
+                                </div>
+                            </td>
+                            <td>
+                                <div>Cutu</div>
+                                <div class="small text-muted">
+                                    <span>Macho</span> | Registrado: 30/06/2015
+                                </div>
+                            </td>
+                            <td>Schnauzer</td>
+                            <td>Perro</td>
+                            <td>Plomo con blanco</td>
+                            <td>
+                                <div>Hugo Roca</div>
+                                <div class="small text-muted">
+                                    <span>Celular</span>: 945943857
+                                </div>
+                            </td>
+                            <td>
+                                <div class="small text-muted">Consulta</div>
+                                <strong>12/05/2018</strong>
+                            </td>
+                            <td>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-facebook">
+                                        <i class="fa fa-edit"></i> Editar</button>
+                                    <button type="button" class="btn btn-danger">
+                                        <i class="fa fa-trash"></i> Eliminar</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <div class="avatar">
+                                    <img src="Assets/img/avatars/3.jpg" alt="hugo.roca@hotmail.com" class="img-avatar">
+                                </div>
+                            </td>
+                            <td>
+                                <div>Cutu</div>
+                                <div class="small text-muted">
+                                    <span>Macho</span> | Registrado: 30/06/2015
+                                </div>
+                            </td>
+                            <td>Schnauzer</td>
+                            <td>Perro</td>
+                            <td>Plomo con blanco</td>
+                            <td>
+                                <div>Hugo Roca</div>
+                                <div class="small text-muted">
+                                    <span>Celular</span>: 945943857
+                                </div>
+                            </td>
+                            <td>
+                                <div class="small text-muted">Consulta</div>
+                                <strong>12/05/2018</strong>
+                            </td>
+                            <td>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-facebook">
+                                        <i class="fa fa-edit"></i> Editar</button>
+                                    <button type="button" class="btn btn-danger">
+                                        <i class="fa fa-trash"></i> Eliminar</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <div class="avatar">
+                                    <img src="Assets/img/avatars/2.jpg" alt="hugo.roca@hotmail.com" class="img-avatar">
+                                </div>
+                            </td>
+                            <td>
+                                <div>Cutu</div>
+                                <div class="small text-muted">
+                                    <span>Macho</span> | Registrado: 30/06/2015
+                                </div>
+                            </td>
+                            <td>Schnauzer</td>
+                            <td>Perro</td>
+                            <td>Plomo con blanco</td>
+                            <td>
+                                <div>Hugo Roca</div>
+                                <div class="small text-muted">
+                                    <span>Celular</span>: 945943857
+                                </div>
+                            </td>
+                            <td>
+                                <div class="small text-muted">Consulta</div>
+                                <strong>12/05/2018</strong>
+                            </td>
+                            <td>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-facebook">
+                                        <i class="fa fa-edit"></i> Editar</button>
+                                    <button type="button" class="btn btn-danger">
+                                        <i class="fa fa-trash"></i> Eliminar</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                <form role="form" name="frmPacientes" ng-submit="" novalidate style="display: none;">
                     <div class="row">
                         <div class="col-12 col-lg-4">
                             <div class="form-group">
@@ -78,7 +214,8 @@
                             </div>
                             &nbsp;
                             <p class="text-center">
-                                <button class="btn btn-primary"><span class="fa fa-upload"></span> Subir foto</button>
+                                <button class="btn btn-primary">
+                                    <span class="fa fa-upload"></span> Subir foto</button>
                             </p>
                         </div>
                     </div>
