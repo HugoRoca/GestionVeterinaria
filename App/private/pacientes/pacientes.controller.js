@@ -10,10 +10,16 @@
         var vm = this;
         
 
+        vm.mostrarModalCRUD = mostrarModalCRUD;
+
         activate();
 
         ////////////////
 
         function activate() { toastr.success('Probando','Mensaje'); }
+
+        function mostrarModalCRUD() {
+            MostrarModal('RegistraEditaModal');
+        }
     }
 })();

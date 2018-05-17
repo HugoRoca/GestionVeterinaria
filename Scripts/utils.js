@@ -267,3 +267,13 @@ function PasarFechaBarraMySql(val) {
 function mostrarConsola(texto){
     return console.log(texto);
 }
+
+function MostrarModal(val) {
+    $('#' + val).modal({ backdrop: 'static', keyboard: false });
+}
+
+function CerrarModal(val) {
+    $('#' + val).modal('hide');
+    $('body').removeClass('modal-open');
+    $('.modal-backdrop').remove();
+}
