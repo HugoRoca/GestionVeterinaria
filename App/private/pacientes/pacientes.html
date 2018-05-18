@@ -1,162 +1,170 @@
-<ol class="breadcrumb">
-    <li class="breadcrumb-item">Inicio</li>
-    <li class="breadcrumb-item active">Registro de pacientes</li>
-</ol>
-<div class="container-fluid" ng-controller="pacientesController as vm">
-    <div class="animated fadeIn">
-        <div class="card">
-            <div class="card-header">
-                <div class="controls">
-                    <div class="input-prepend input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                                <i class="fa fa-search"></i>
-                            </span>
+<div ng-controller="pacientesController as vm">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">Inicio</li>
+        <li class="breadcrumb-item active">{{vm.Titulo}}</li>
+    </ol>
+    <div class="container-fluid">
+        <div class="animated fadeIn">
+            <ul class="nav nav-tabs hide" id="Pacientes" role="tablist" style="display: none;">
+                <li class="nav-item">
+                    <a class="nav-link active" id="listaPacientes-tab" data-toggle="tab" data-target="#ListaPacientes" role="tab">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="registroPacientes-tab" data-toggle="tab" data-target="#RegistroPacientes" role="tab">Profile</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="ListaPacientes" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="controls">
+                                <div class="input-prepend input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-search"></i>
+                                        </span>
+                                    </div>
+                                    <input id="txtBuscar" class="form-control col-sm-2" type="text" maxlength="20" placeholder="Nombre de mascota...">
+                                    <span class="input-group-append">
+                                        <button class="btn btn-secondary" type="button">
+                                            <i class="fa fa-search"></i> Buscar</button>
+                                        <button class="btn btn-success" type="button" ng-click="vm.NuevoRegistro()">
+                                            <i class="fa fa-github"></i> |
+                                            <i class="fa fa-plus"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
-                        <input id="txtBuscar" class="form-control col-sm-2" type="text" maxlength="20" placeholder="Nombre de mascota...">
-                        <span class="input-group-append">
-                            <button class="btn btn-secondary" type="button">
-                                <i class="fa fa-search"></i> Buscar</button>
-                            <button class="btn btn-success" type="button" ng-click="vm.mostrarModalCRUD()">
-                                <i class="fa fa-github"></i> |
-                                <i class="fa fa-plus"></i>
-                            </button>
-                        </span>
+                        <div class="card-body">
+                            <table class="table table-responsive-sm table-hover table-outline mb-0">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th class="text-center">
+                                            <i class="fa fa-paw"></i>
+                                        </th>
+                                        <th class="text-center">Mascota</th>
+                                        <th>Raza</th>
+                                        <th>Especie</th>
+                                        <th>Color</th>
+                                        <th>Dueño</th>
+                                        <th>Ult. Visita</th>
+                                        <th>&nbsp;</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center">
+                                            <div class="avatar">
+                                                <img src="Assets/img/avatars/1.jpg" alt="hugo.roca@hotmail.com" class="img-avatar">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>Cutu</div>
+                                            <div class="small text-muted">
+                                                <span>Macho</span> | Registrado: 30/06/2015
+                                            </div>
+                                        </td>
+                                        <td>Schnauzer</td>
+                                        <td>Perro</td>
+                                        <td>Plomo con blanco</td>
+                                        <td>
+                                            <div>Hugo Roca</div>
+                                            <div class="small text-muted">
+                                                <span>Celular</span>: 945943857
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="small text-muted">Consulta</div>
+                                            <strong>12/05/2018</strong>
+                                        </td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-facebook">
+                                                    <i class="fa fa-edit"></i> Editar</button>
+                                                <button type="button" class="btn btn-danger">
+                                                    <i class="fa fa-trash"></i> Eliminar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <div class="avatar">
+                                                <img src="Assets/img/avatars/3.jpg" alt="hugo.roca@hotmail.com" class="img-avatar">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>Cutu</div>
+                                            <div class="small text-muted">
+                                                <span>Macho</span> | Registrado: 30/06/2015
+                                            </div>
+                                        </td>
+                                        <td>Schnauzer</td>
+                                        <td>Perro</td>
+                                        <td>Plomo con blanco</td>
+                                        <td>
+                                            <div>Hugo Roca</div>
+                                            <div class="small text-muted">
+                                                <span>Celular</span>: 945943857
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="small text-muted">Consulta</div>
+                                            <strong>12/05/2018</strong>
+                                        </td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-facebook">
+                                                    <i class="fa fa-edit"></i> Editar</button>
+                                                <button type="button" class="btn btn-danger">
+                                                    <i class="fa fa-trash"></i> Eliminar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <div class="avatar">
+                                                <img src="Assets/img/avatars/2.jpg" alt="hugo.roca@hotmail.com" class="img-avatar">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>Cutu</div>
+                                            <div class="small text-muted">
+                                                <span>Macho</span> | Registrado: 30/06/2015
+                                            </div>
+                                        </td>
+                                        <td>Schnauzer</td>
+                                        <td>Perro</td>
+                                        <td>Plomo con blanco</td>
+                                        <td>
+                                            <div>Hugo Roca</div>
+                                            <div class="small text-muted">
+                                                <span>Celular</span>: 945943857
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="small text-muted">Consulta</div>
+                                            <strong>12/05/2018</strong>
+                                        </td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-facebook">
+                                                    <i class="fa fa-edit"></i> Editar</button>
+                                                <button type="button" class="btn btn-danger">
+                                                    <i class="fa fa-trash"></i> Eliminar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card-body">
-                <table class="table table-responsive-sm table-hover table-outline mb-0">
-                    <thead class="thead-light">
-                        <tr>
-                            <th class="text-center">
-                                <i class="fa fa-paw"></i>
-                            </th>
-                            <th class="text-center">Mascota</th>
-                            <th>Raza</th>
-                            <th>Especie</th>
-                            <th>Color</th>
-                            <th>Dueño</th>
-                            <th>Ult. Visita</th>
-                            <th>&nbsp;</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="text-center">
-                                <div class="avatar">
-                                    <img src="Assets/img/avatars/1.jpg" alt="hugo.roca@hotmail.com" class="img-avatar">
-                                </div>
-                            </td>
-                            <td>
-                                <div>Cutu</div>
-                                <div class="small text-muted">
-                                    <span>Macho</span> | Registrado: 30/06/2015
-                                </div>
-                            </td>
-                            <td>Schnauzer</td>
-                            <td>Perro</td>
-                            <td>Plomo con blanco</td>
-                            <td>
-                                <div>Hugo Roca</div>
-                                <div class="small text-muted">
-                                    <span>Celular</span>: 945943857
-                                </div>
-                            </td>
-                            <td>
-                                <div class="small text-muted">Consulta</div>
-                                <strong>12/05/2018</strong>
-                            </td>
-                            <td>
-                                <div class="btn-group" role="group" aria-label="Basic example">
-                                    <button type="button" class="btn btn-facebook">
-                                        <i class="fa fa-edit"></i> Editar</button>
-                                    <button type="button" class="btn btn-danger">
-                                        <i class="fa fa-trash"></i> Eliminar</button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text-center">
-                                <div class="avatar">
-                                    <img src="Assets/img/avatars/3.jpg" alt="hugo.roca@hotmail.com" class="img-avatar">
-                                </div>
-                            </td>
-                            <td>
-                                <div>Cutu</div>
-                                <div class="small text-muted">
-                                    <span>Macho</span> | Registrado: 30/06/2015
-                                </div>
-                            </td>
-                            <td>Schnauzer</td>
-                            <td>Perro</td>
-                            <td>Plomo con blanco</td>
-                            <td>
-                                <div>Hugo Roca</div>
-                                <div class="small text-muted">
-                                    <span>Celular</span>: 945943857
-                                </div>
-                            </td>
-                            <td>
-                                <div class="small text-muted">Consulta</div>
-                                <strong>12/05/2018</strong>
-                            </td>
-                            <td>
-                                <div class="btn-group" role="group" aria-label="Basic example">
-                                    <button type="button" class="btn btn-facebook">
-                                        <i class="fa fa-edit"></i> Editar</button>
-                                    <button type="button" class="btn btn-danger">
-                                        <i class="fa fa-trash"></i> Eliminar</button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text-center">
-                                <div class="avatar">
-                                    <img src="Assets/img/avatars/2.jpg" alt="hugo.roca@hotmail.com" class="img-avatar">
-                                </div>
-                            </td>
-                            <td>
-                                <div>Cutu</div>
-                                <div class="small text-muted">
-                                    <span>Macho</span> | Registrado: 30/06/2015
-                                </div>
-                            </td>
-                            <td>Schnauzer</td>
-                            <td>Perro</td>
-                            <td>Plomo con blanco</td>
-                            <td>
-                                <div>Hugo Roca</div>
-                                <div class="small text-muted">
-                                    <span>Celular</span>: 945943857
-                                </div>
-                            </td>
-                            <td>
-                                <div class="small text-muted">Consulta</div>
-                                <strong>12/05/2018</strong>
-                            </td>
-                            <td>
-                                <div class="btn-group" role="group" aria-label="Basic example">
-                                    <button type="button" class="btn btn-facebook">
-                                        <i class="fa fa-edit"></i> Editar</button>
-                                    <button type="button" class="btn btn-danger">
-                                        <i class="fa fa-trash"></i> Eliminar</button>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="RegistraEditaModal">
-        <div class="modal-dialog modal-lg modal-dialog-centered modal-success">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Registro de Mascota</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
+                <div class="tab-pane fade" id="RegistroPacientes" role="tabpanel" aria-labelledby="profile-tab">
+                    <p>
+                        <a href="" ng-click="vm.volverLista()">
+                            <i class="fa fa-angle-left"></i> Volver a la lista</a>
+                    </p>
                     <form role="form" name="frmPacientes" ng-submit="" novalidate>
                         <div class="row">
                             <div class="col-12 col-lg-4">
@@ -246,7 +254,7 @@
                                             <div class="input-group mb-3">
                                                 <div class="input-group-prepend">
                                                     <label class="input-group-text">
-                                                        <i class="icofont icofont-dna-alt-2"></i>
+                                                        <i class="fa fa-sort-numeric-desc"></i>
                                                     </label>
                                                 </div>
                                                 <select id="cmbTamanio" class="form-control">
@@ -261,7 +269,7 @@
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text">
-                                                        <i class="fa fa-paw"></i>
+                                                        <i class="nav-icon icon-drop"></i>
                                                     </span>
                                                 </div>
                                                 <input type="text" id="txtColor" class="form-control">
@@ -276,7 +284,7 @@
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text">
-                                                        <i class="fa fa-paw"></i>
+                                                        <i class="fa fa-balance-scale"></i>
                                                     </span>
                                                 </div>
                                                 <input type="text" id="txtPeso" class="form-control">
@@ -308,8 +316,10 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-12 col-lg-12">
-                                        <label class="form-col-form-label">Observaciones</label>
-                                        <textarea id="txtObservaciones" cols="1" rows="3" class="form-control"></textarea>
+                                        <div class="form-group">
+                                            <label class="form-col-form-label">Observaciones</label>
+                                            <textarea id="txtObservaciones" cols="1" rows="3" class="form-control"></textarea>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -324,11 +334,45 @@
                                 </p>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-lg-6"></div>
+                                <div class="col-lg-3">
+                                    <p>
+                                        <button type="button" class="btn btn-success btn-block">
+                                            <i class="fa fa-save"></i> Registrar</button>
+                                    </p>
+                                </div>
+                                <div class="col-lg-3">
+                                    <p>
+                                        <button type="button" class="btn btn-danger btn-block">
+                                            <i class="fa fa-close"></i> Cancelar</button>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
                     </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-success"><i class="fa fa-save"></i> Registrar</button>
-                    <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-close"></i> Cerrar</button>
+            </div>
+            <p>&nbsp;</p>
+        </div>
+        <div class="modal fade" id="RegistraEditaModal">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-success">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Registro de Mascota</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success">
+                            <i class="fa fa-save"></i> Registrar</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">
+                            <i class="fa fa-close"></i> Cerrar</button>
+                    </div>
                 </div>
             </div>
         </div>
