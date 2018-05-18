@@ -196,7 +196,9 @@
                                             <label class="form-col-form-label">Raza:</label>
                                             <div class="input-group mb-3">
                                                 <div class="input-group-prepend">
-                                                        <label class="input-group-text"><i class="icofont icofont-atom"></i></label>
+                                                    <label class="input-group-text">
+                                                        <i class="icofont icofont-dna-alt-2"></i>
+                                                    </label>
                                                 </div>
                                                 <select class="custom-select" id="cmbRaza">
                                                     <option selected>--Seleccione--</option>
@@ -209,17 +211,31 @@
                                     <div class="col-12 col-lg-6">
                                         <div class="form-group">
                                             <label class="form-col-form-label">Especie:</label>
-                                            <select id="cmdEspecie" class="form-control">
-                                                <option value="">--Seleccione--</option>
-                                            </select>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <label class="input-group-text">
+                                                        <i class="icofont icofont-animal-bone"></i>
+                                                    </label>
+                                                </div>
+                                                <select id="cmdEspecie" class="custom-select">
+                                                    <option value="">--Seleccione--</option>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-6">
                                         <div class="form-group">
                                             <label class="form-col-form-label">Sexo:</label>
-                                            <select id="cmbSexo" class="form-control">
-                                                <option value="">--Seleccione--</option>
-                                            </select>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <label class="input-group-text">
+                                                        <i class="icofont icofont-dna-alt-2"></i>
+                                                    </label>
+                                                </div>
+                                                <select id="cmbSexo" class="custom-select">
+                                                    <option value="">--Seleccione--</option>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -227,15 +243,29 @@
                                     <div class="col-12 col-lg-6">
                                         <div class="form-group">
                                             <label class="form-ol-form-label">Tamaño:</label>
-                                            <select id="cmbTamanio" class="form-control">
-                                                <option value="">--Seleccione--</option>
-                                            </select>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <label class="input-group-text">
+                                                        <i class="icofont icofont-dna-alt-2"></i>
+                                                    </label>
+                                                </div>
+                                                <select id="cmbTamanio" class="form-control">
+                                                    <option value="">--Seleccione--</option>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-6">
                                         <div class="form-group">
                                             <label class="form-col-form-label">Color:</label>
-                                            <input type="text" id="txtColor" class="form-control">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="fa fa-paw"></i>
+                                                    </span>
+                                                </div>
+                                                <input type="text" id="txtColor" class="form-control">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -243,7 +273,14 @@
                                     <div class="col-12 col-lg-6">
                                         <div class="form-group">
                                             <label class="form-col-form-label">Peso:</label>
-                                            <input type="text" id="txtPeso" class="form-control">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="fa fa-paw"></i>
+                                                    </span>
+                                                </div>
+                                                <input type="text" id="txtPeso" class="form-control">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-6 col-lg-3">
@@ -290,7 +327,8 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-success"><i class="fa fa-save"></i> Registrar</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-close"></i> Cerrar</button>
                 </div>
             </div>
         </div>
