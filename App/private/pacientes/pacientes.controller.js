@@ -18,7 +18,7 @@
 
         ////////////////
 
-        function activate() { vm.Titulo = 'Lista de Pacientes'; toastr.success('Probando','Mensaje'); }
+        function activate() { vm.Titulo = 'Lista de Pacientes'; }
 
         function mostrarModalCRUD() {
             MostrarModal('RegistraEditaModal');
