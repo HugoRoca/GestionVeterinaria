@@ -17,11 +17,11 @@
                                     <i class="fa fa-search"></i>
                                 </div>
                             </div>
-                            <input type="text" class="form-control" id="txtBuscar" placeholder="Nombre de Mascota">
+                            <input type="text" class="form-control" id="txtBuscar" autofocus autocomplete="off" maxlength="20" placeholder="Nombre de Mascota">
                         </div>
-                        <button type="submit" class="btn btn-primary mb-2">Buscar</button>
+                        <button type="submit" class="btn btn-primary mb-2"><i class="fa fa-search"></i> | Buscar</button>
                         &nbsp;
-                        <button type="submit" class="btn btn-primary mb-2">Buscar</button>
+                        <button type="button" ng-click="vm.NuevoRegistro()" class="btn btn-success mb-2"><i class="fa fa-plus"></i> | Nueva Mascota</button>
                     </form>
                     <table class="table table-responsive-sm table-hover table-outline mb-0">
                         <thead class="thead-light">
