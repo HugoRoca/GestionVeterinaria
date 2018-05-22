@@ -277,3 +277,17 @@ function CerrarModal(val) {
     $('body').removeClass('modal-open');
     $('.modal-backdrop').remove();
 }
+
+function callCalendario(id, position) {
+    $('#' + id).datepicker({
+        format: "dd/mm/yyyy",
+        language: "es",
+        orientation: position + " auto",
+        autoclose: true,
+        todayHighlight: true
+    });
+}
+
+function callMascara(id, mask) {
+    $('#' + id).mask(mask);
+}
