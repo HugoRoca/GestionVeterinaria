@@ -18,6 +18,10 @@
                 url: '/pacientes',
                 templateUrl: 'App/private/pacientes/pacientes.html'
             })
+            .state('pacienteRegistra', {
+                url: '/pacienteRegistra',
+                templateUrl: 'App/private/pacientes/pacientesRegistrar.html'
+            })
             .state('historia', {
                 url: '/historia',
                 templateUrl: 'App/private/historia/historia.html'

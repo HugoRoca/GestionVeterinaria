@@ -1,4 +1,4 @@
-(function() {
+(function () {
     'use strict';
 
     angular
@@ -6,32 +6,28 @@
         .controller('pacientesController', pacientesController);
 
     pacientesController.$inject = ['configService', 'authenticationService', 'dataService', 'toastr', '$state'];
+
     function pacientesController(configService, authenticationService, dataService, toastr, $state) {
         var vm = this;
         vm.Titulo = '';
 
         vm.mostrarModalCRUD = mostrarModalCRUD;
         vm.NuevoRegistro = NuevoRegistro;
-        vm.volverLista = volverLista;
 
         activate();
 
         ////////////////
 
-        function activate() { vm.Titulo = 'Lista de Pacientes'; }
+        function activate() {
+            vm.Titulo = 'Lista de Pacientes';
+        }
 
         function mostrarModalCRUD() {
             MostrarModal('RegistraEditaModal');
         }
-        
-        function NuevoRegistro() {
-            $('#Pacientes a[data-target="#RegistroPacientes"]').tab('show');
-            vm.Titulo = 'Registro de Pacientes';            
-        }
 
-        function volverLista(){
-            $('#Pacientes a[data-target="#ListaPacientes"]').tab('show');
-            vm.Titulo = 'Lista de Pacientes'; 
+        function NuevoRegistro() {
+            $state.go('pacienteRegistra');
         }
     }
 })();

@@ -1,0 +1,206 @@
+<div ng-controller="pacienteRegistrarController as vm">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">Inicio</li>
+        <li class="breadcrum-item">Lista de Pacientes</li>
+        <li class="breadcrumb-item active">Registro de Paciente</li>
+    </ol>
+    <div class="container-fluid">
+        <div class="animated fadeIn">
+            <div class="card">
+                <div class="card-header">
+                    <b><a href="" ng-click="vm.volverLista()"><i class="fa fa-angle-left"></i> Volver</a> / Registro de Paciente</b>
+                </div>
+                <div class="card-body">
+                    <form role="form" name="frmPacientes" ng-submit="" novalidate>
+                        <div class="row">
+                            <div class="col-12 col-lg-4">
+                                <div class="form-group">
+                                    <label class="form-col-form-label">
+                                        <b>ID Paciente</b>
+                                    </label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="fa fa-id-card-o"></i>
+                                            </span>
+                                        </div>
+                                        <input type="text" id="txtIdPaciente" class="form-control" value="P0000001" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-lg-8">
+                                <div class="row">
+                                    <div class="col-12 col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-col-form-label">Nombre paciente:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="fa fa-paw"></i>
+                                                    </span>
+                                                </div>
+                                                <input type="text" class="form-control" id="txtNombrePaciente" autocomplete="off" autofocus maxlength="100">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-col-form-label">Raza:</label>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <label class="input-group-text">
+                                                        <i class="icofont icofont-dna-alt-2"></i>
+                                                    </label>
+                                                </div>
+                                                <select class="custom-select" id="cmbRaza">
+                                                    <option selected>--Seleccione--</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-col-form-label">Especie:</label>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <label class="input-group-text">
+                                                        <i class="icofont icofont-animal-bone"></i>
+                                                    </label>
+                                                </div>
+                                                <select id="cmdEspecie" class="custom-select">
+                                                    <option value="">--Seleccione--</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-col-form-label">Sexo:</label>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <label class="input-group-text">
+                                                        <i class="icofont icofont-dna-alt-2"></i>
+                                                    </label>
+                                                </div>
+                                                <select id="cmbSexo" class="custom-select">
+                                                    <option value="">--Seleccione--</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-ol-form-label">Tamaño:</label>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <label class="input-group-text">
+                                                        <i class="fa fa-sort-numeric-desc"></i>
+                                                    </label>
+                                                </div>
+                                                <select id="cmbTamanio" class="form-control">
+                                                    <option value="">--Seleccione--</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-col-form-label">Color:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="nav-icon icon-drop"></i>
+                                                    </span>
+                                                </div>
+                                                <input type="text" id="txtColor" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-col-form-label">Peso:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="fa fa-balance-scale"></i>
+                                                    </span>
+                                                </div>
+                                                <input type="text" id="txtPeso" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-lg-3">
+                                        <div class="form-group">
+                                            <label class="form-col-form-label">Edad</label>
+                                            <div class="input-group">
+                                                <input type="text" id="txtAnios" class="form-control">
+                                                <span class="input-group-append">
+                                                    <span class="input-group-text">Año</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-lg-3">
+                                        <div class="form-group">
+                                            <label class="form-col-form-label">&nbsp;</label>
+                                            <div class="input-group">
+                                                <input type="text" id="txtMes" class="form-control">
+                                                <span class="input-group-append">
+                                                    <span class="input-group-text">Mes</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-lg-12">
+                                        <div class="form-group">
+                                            <label class="form-col-form-label">Observaciones</label>
+                                            <textarea id="txtObservaciones" cols="1" rows="3" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <div class="text-center" style="border: 1px solid #000000">
+                                    <img src="Assets/img/registro_paciente_dibujo.jpg" alt="imagen-mascota" class="rounded" width="230px" height="330px">
+                                </div>
+                                &nbsp;
+                                <p class="text-center">
+                                    <button class="btn btn-primary">
+                                        <span class="fa fa-upload"></span> Subir foto</button>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-lg-6"></div>
+                                <div class="col-lg-3">
+                                    <p>
+                                        <button type="button" class="btn btn-success btn-block">
+                                            <i class="fa fa-save"></i> Registrar</button>
+                                    </p>
+                                </div>
+                                <div class="col-lg-3">
+                                    <p>
+                                        <button type="button" class="btn btn-danger btn-block">
+                                            <i class="fa fa-close"></i> Cancelar</button>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
