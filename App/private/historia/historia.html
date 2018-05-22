@@ -6,7 +6,69 @@
     <div class="container-fluid">
         <div class="animated fadeIn">
             <div class="card">
-                <div class="card-header"></div>
+                <div class="card-header">
+                    <b>Historias Clinicas de Pacientes</b>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-1"></div>
+                            <div class="form-group col-md-2">
+                                <label for="txtDesde">Desde:</label>
+                                <input type="text" id="txtDesde" class="form-control" autofocus>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="txtHasta">Hasta:</label>
+                                <input type="text" id="txtHasta" class="form-control">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="txtNombreMascota">Nombre mascota:</label>
+                                <input type="text" id="txtNombreMascota" class="form-control">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="txtCliente">Cliente:</label>
+                                <input type="text" id="txtCliente" class="form-control">
+                            </div>
+                            <div class="form-group col-md-1"></div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <p class="text-center">
+                                    <button type="submit" class="btn btn-primary" id="btnBuscarHistoria"><i class="fa fa-search"></i> Buscar</button>
+                                    <button type="button" class="btn btn-success" id="btnNuevaHistoria"><i class="fa fa-plus"></i> | <i class="fa fa-book"></i> Nueva Historia</button>
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                    <table class="table table-responsive-sm table-hover table-outline mb-0">
+                        <thead class="thead-light">
+                            <tr>
+                                <th class="text-center">
+                                    <i class="fa fa-paw"></i>
+                                </th>
+                                <th class="text-center">Mascota</th>
+                                <th>Raza</th>
+                                <th>Especie</th>
+                                <th>Color</th>
+                                <th>Dueño</th>
+                                <th>Ult. Visita</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tboby>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tboby>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
