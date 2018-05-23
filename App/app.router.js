@@ -26,6 +26,10 @@
                 url: '/historia',
                 templateUrl: 'App/private/historia/historia.html'
             })
+            .state('historiaRegistrar', {
+                url: '/historiaRegistrar',
+                templateUrl: 'App/private/historia/historiaRegistrar.html'
+            })
             .state('otherwise',{
                 url: '*path',
                 templateUrl: 'App/private/dashboard/dashboard.html'
