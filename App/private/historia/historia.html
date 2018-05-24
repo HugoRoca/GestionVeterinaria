@@ -1,7 +1,7 @@
 <div ng-controller="historiaController as vm">
     <ol class="breadcrumb">
         <li class="breadcrumb-item">Inicio</li>
-        <li class="breadcrumb-item active">{{vm.Titulo}}</li>
+        <li class="breadcrumb-item active">Lista de historias</li>
     </ol>
     <div class="container-fluid">
         <div class="animated fadeIn">
@@ -36,7 +36,7 @@
                                 <p class="text-center">
                                     <button type="submit" class="btn btn-primary" id="btnBuscarHistoria">
                                         <i class="fa fa-search"></i> Buscar</button>
-                                    <button type="button" class="btn btn-success" id="btnNuevaHistoria">
+                                    <button type="button" class="btn btn-success" id="btnNuevaHistoria" ng-click="vm.nuevaHistoria()">
                                         <i class="fa fa-plus"></i> |
                                         <i class="fa fa-book"></i> Nueva Historia</button>
                                 </p>

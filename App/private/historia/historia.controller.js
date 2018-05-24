@@ -11,20 +11,28 @@
         var fechaHoy = new Date();
         var fechaHoyFormato = getDateFormat(fechaHoy);
 
-        vm.Titulo = '';
         vm.historiaBusqueda = {
             Desde: '',
             Hasta:''
         }
 
+        vm.volverLista = volverLista;
+        vm.nuevaHistoria = nuevaHistoria;
         activate();
 
         ////////////////
 
         function activate() { 
-            vm.Titulo = 'Busqueda de historial'; 
             vm.historiaBusqueda.Desde = fechaHoyFormato;
             vm.historiaBusqueda.Hasta = fechaHoyFormato;
+        }
+
+        function volverLista(){
+            $state.go('historia');
+        }
+
+        function nuevaHistoria() {
+            $state.go('historiaRegistrar');
         }
     }
 })();
