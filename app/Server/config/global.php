@@ -5,10 +5,10 @@ define("DB_HOST", "localhost");
 define("DB_NAME", "dbsistena");
 //Usuario de la base de datos
 define("DB_USERNAME","root");
-//Contraseña del usuario de la ase de datos
+//Contraseña de BD
 define("DB_PASSWORD","");
-//Definimos la codificación de los caracteres
+//Codificación de los caracteres
 define("DB_ENCODE","utf8");
-//Definimos una constante como nombre del proyecto
+//Nombre del proyecto
 define("PRO_NOMBRE","ITVentas");
 ?>
