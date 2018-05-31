@@ -10,7 +10,48 @@
                     <b>Lista de Propietarios</b>
                 </div>
                 <div class="card-body">
-
+                    <form class="form-inline">
+                        <div class="input-group mb-2 mr-sm-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control" id="txtBuscar" autofocus autocomplete="off" maxlength="20" placeholder="Nombre de Propietario">
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2"><i class="fa fa-search"></i> | Buscar</button>
+                        &nbsp;
+                        <button type="button" ng-click="vm.NuevoRegistro()" class="btn btn-success mb-2"><i class="fa fa-plus"></i> | Nueva Propietario</button>
+                    </form>
+                    <table class="table table-responsive-sm table-hover table-outline mb-0">
+                        <thead class="thead-light">
+                            <tr>
+                                <th class="text-center">Documento</th>
+                                <th>Nombres</th>
+                                <th>Apellidos</th>
+                                <th class="text-center">Celular</th>
+                                <th class="text-center">Teléfono</th>
+                                <th>Dirección</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">75424084</td>
+                                <td>Hugo Antonio</td>
+                                <td>Roca Espinoza</td>
+                                <td class="text-center">945943857</td>
+                                <td class="text-center">7814340</td>
+                                <td>Mz C Lt / Urb. San Remo II SMP</td>
+                                <td class="text-center">
+                                    <div class="btn-group" role="group">
+                                        <button type="button" class="btn btn-facebook"><i class="fa fa-edit"></i> Editar</button>
+                                        <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i> Eliminar</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
