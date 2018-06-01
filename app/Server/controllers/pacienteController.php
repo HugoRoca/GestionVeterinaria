@@ -40,7 +40,31 @@ switch ($_GET['op']) {
         break;
 
     case 'list':
-        # code...
+        $exec = $paciente->list();
+        $data = array();
+
+        while ($reg = $exec->fetch_object()) {
+            $data[] = array(
+                '0'=> ($reg->estado) ? '' : '',
+                '1'=> $reg->nombre,
+                '2'=> $reg->raza,
+                '3'=> $reg->especie,
+                '4'=> $reg->sexo,
+                '5'=> $reg->tamaño,
+                '6'=> $reg->peso,
+                '7'=> $reg->fecha_nacimiento
+            );
+        }
+
+        $result = array(
+            'sEcho'=> 1,
+            'iTotalRecords'=> count($data),
+            'iTotalDisplayRecords'=> count($data),
+            'aaData'=> $data
+        );
+
+        echo json_encode($result);
+
         break;
 }
 

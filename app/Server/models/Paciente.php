@@ -14,6 +14,11 @@ Class Paciente{
 
         return ejecutarConsulta($sql);
     }
+
+    public function list(){
+        $sql = "SELECT * FROM pacientes";
+        return ejecutarConsulta($sql);
+    }
 }
 
 ?>
