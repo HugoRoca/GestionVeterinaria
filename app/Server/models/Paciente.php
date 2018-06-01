@@ -8,7 +8,7 @@ Class Paciente{
 
     }
 
-    public function insertar($nombre, $idraza, $idespecie, $sexo, $tamaño, $color, $peso, $edad_mes, $edad_año, $fecha_nacimiento, $observaciones, $fecha_hora_registro, $idusuario){
+    public function insert($nombre, $idraza, $idespecie, $sexo, $tamaño, $color, $peso, $edad_mes, $edad_año, $fecha_nacimiento, $observaciones, $fecha_hora_registro, $idusuario){
         $sql = "INSERT INTO pacientes(nombre, idraza, idespecie, sexo, tamaño, color, peso, edad_mes, edad_año, fecha_nacimiento, observaciones, fecha_hora_registro, idusuario, estado)
                 VALUES('$nombre', '$idraza', '$idespecie', '$sexo', '$tamaño', '$color', '$peso', '$edad_mes', '$edad_año', '$fecha_nacimiento', '$observaciones', '$fecha_hora_registro', '$idusuario', '1')";
 
