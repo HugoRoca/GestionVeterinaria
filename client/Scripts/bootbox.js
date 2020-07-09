@@ -11,14 +11,14 @@
   "use strict";
   if (typeof define === "function" && define.amd) {
     // AMD. Register as an anonymous module.
-    define(["jquery"], factory);
+    define(["client/Scripts/jquery"], factory);
   } else if (typeof exports === "object") {
     // Node. Does not work with strict CommonJS, but
     // only CommonJS-like environments that support module.exports,
     // like Node.
 
     if (typeof $ === "undefined") {
-      module.exports = factory(require("jquery"));
+      module.exports = factory(require("client/Scripts/jquery"));
     } else {
       module.exports = factory($); // jshint ignore:line
     }

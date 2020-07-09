@@ -6,9 +6,9 @@
  * Licensed under the Apache License v2.0 (http://www.apache.org/licenses/LICENSE-2.0)
  */(function(factory){
     if (typeof define === "function" && define.amd) {
-        define(["jquery"], factory);
+        define(["client/Scripts/jquery"], factory);
     } else if (typeof exports === 'object') {
-        factory(require('jquery'));
+        factory(require('client/Scripts/jquery'));
     } else {
         factory(jQuery);
     }
